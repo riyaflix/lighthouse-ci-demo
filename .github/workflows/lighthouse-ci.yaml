@@ -29,5 +29,8 @@ jobs:
         env:
           LHCI_BUILD_CONTEXT__CURRENT_BRANCH: ${{ github.ref_name }}
 
+      - name: Sleep for 20 minutes
+        run: sleep 1200
+
       - name: Stop the local server
         run: kill $(cat server.pid) || true
